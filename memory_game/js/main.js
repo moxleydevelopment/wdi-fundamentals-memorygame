@@ -53,5 +53,19 @@ function createBoard() {
     };
 };
 
+function resetBD() {
+    var cardReset = document.querySelectorAll('img');
+    
+    for (var i = 0; i < cardReset.length; i++) {
+      cardReset[i].setAttribute('src', 'images/back.png');
+   };
+
+   cardsInPlay = [];
+};
+
+
+var resetBT= document.getElementById('resetBoard');
+resetBT.addEventListener('click', resetBD); 
+
 
 createBoard();
